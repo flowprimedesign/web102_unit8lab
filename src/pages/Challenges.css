@@ -1,0 +1,36 @@
+/* Challenge/Racing Card Variant */
+.Card.challenge-card {
+  border-color: var(--neon-orange);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 128, 0, 0.1) 0%,
+    var(--card-bg) 50%,
+    rgba(255, 0, 128, 0.1) 100%
+  );
+}
+
+.Card.challenge-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px var(--neon-orange);
+}
+
+/* Racing Theme Elements */
+.racing-stripe {
+  position: relative;
+}
+
+.racing-stripe::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--neon-orange),
+    var(--neon-pink),
+    transparent
+  );
+  animation: dataStream 2s linear infinite;
+}
